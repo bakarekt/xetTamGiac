@@ -1,40 +1,37 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
-bool can (int a, int b, int c){
-	if (a == b || b == c || c == a){
+bool can (double a, double b, double c){
+	if (a == b || b == c || a == c){
 		return 1;
-	} else {
-		return 0;
 	}
+	return 0;
 }
 
-bool vuong (int a, int b, int c){
-	if (pow(a, 2) == pow(b, 2) + pow(c, 2) || pow(b, 2) == pow(a, 2) + pow(c, 2) || pow(c, 2) == pow(b, 2) + pow(a, 2)){
+bool vuong (double a, double b, double c){
+	if (a*a == b*b + c*c || b*b == a*a + c*c || c*c == a*a + b*b){
 		return 1;
-	} else {
-		return 0;
 	}
+		return 0;
 }
 
 int main() {
-	int a, b ,c;
+	double a, b ,c;
 	cout << "Nhap cac canh tam giac: ";
 	cin >> a >> b >> c;
-	cout << "Tam giac da cho";
+	cout << "Tam giac da cho ";
 	if (a == b && b == c){
-		cout << " deu";
+		cout << "deu";
 		goto end;
 	}
 	if (vuong(a, b, c) == 1){
-		cout << " vuong";
+		cout << "vuong ";
 	}
 	if (can(a, b, c) == 1){
-		cout << " can";
+		cout << "can";
 	}
     else{
-        cout << " la tam giac thuong";
+        cout << "la tam giac thuong";
     }
 	
 	end:
