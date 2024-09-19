@@ -29,8 +29,7 @@ int main() {
 	}
 	if (can(a, b, c) == 1){
 		cout << "can";
-	}
-    else{
+	}else{
         cout << "la tam giac thuong";
     }
 	
